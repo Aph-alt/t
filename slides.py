@@ -308,7 +308,7 @@ class DopplerEffect(Slide, MovingCameraScene):
 
         self.next_slide()
 
-        self.play(FadeOut(fa_dot), FadeOut(fb_dot))
+        self.play(FadeOut(fa_dot), FadeOut(fb_dot), FadeOut(a_dot), FadeOut(b_dot))
 
         ataxitita = Text("Σχετική Ταχύτητα", font_size=36).shift(UP * 3)
 
@@ -826,6 +826,8 @@ class DopplerEffect(Slide, MovingCameraScene):
             ([6],[6])
         ))
         self.play(Circumscribe(ee11))
+        self.next_slide()
+        self.play(FadeIn(ee11))
 
 class Outro(Slide):
     def construct(self):
