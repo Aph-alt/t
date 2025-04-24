@@ -1,2 +1,3 @@
-manim_slides[manim,manimgl]==5.1.0
+manim
+manim_slides==5.1.0
 MF_Tools
