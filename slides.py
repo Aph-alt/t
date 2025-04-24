@@ -307,14 +307,12 @@ class DopplerEffect(Slide, MovingCameraScene):
         self.remove(a_dot, b_dot)
 
         self.next_slide()
-
-        self.play(FadeOut(fa_dot), FadeOut(fb_dot), FadeOut(a_dot), FadeOut(b_dot))
-
         ataxitita = Text("Σχετική Ταχύτητα", font_size=36).shift(UP * 3)
-
+        
         aa_dot = Dot(color=RED).shift(UP * 1).shift(LEFT * 5)
         ab_dot = Dot(color=BLUE).shift(DOWN * 1).shift(RIGHT * 5)
         self.play(FadeIn(aa_dot), FadeIn(ab_dot), ReplacementTransform(taxitita, ataxitita))
+        self.play(FadeOut(fa_dot), FadeOut(fb_dot), FadeOut(a_dot), FadeOut(b_dot))
 
         self.next_slide()
         self.next_slide(loop = True)
@@ -431,7 +429,7 @@ class DopplerEffect(Slide, MovingCameraScene):
 
         self.next_slide()
 
-        self.play(FadeOut(afa_dot), FadeOut(afb_dot))
+        self.play(FadeOut(afa_dot), FadeOut(afb_dot), FadeOut(aa_dot), FadeOut(ab_dot))
 
         f = MathTex(r"\overrightarrow{\upsilon_{AB}} =  \overrightarrow{\upsilon_A} + \overrightarrow{\upsilon_B} ")
 
@@ -827,7 +825,7 @@ class DopplerEffect(Slide, MovingCameraScene):
         ))
         self.play(Circumscribe(ee11))
         self.next_slide()
-        self.play(FadeIn(ee11))
+        self.play(FadeOut(ee11))
 
 class Outro(Slide):
     def construct(self):
