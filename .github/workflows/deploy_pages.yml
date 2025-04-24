@@ -75,6 +75,7 @@ jobs:
           microtype
           multitoc
           physics
+          polyglossia
           prelim2e
           preview
           ragged2e
