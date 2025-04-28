@@ -825,7 +825,7 @@ class DopplerEffect(Slide, MovingCameraScene):
         ))
         self.play(Circumscribe(ee11))
         self.next_slide()
-        self.play(FadeOut(ee11))
+        self.play(FadeOut(ee11), FadeOut(titleproof))
 
 class Outro(Slide):
     def construct(self):
