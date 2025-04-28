@@ -19,7 +19,7 @@ class DopplerEffect(Slide, MovingCameraScene):
         # Title screen
         title = Text("Το Φαινόμενο Doppler", font_size=48)
         title.set_color_by_gradient(BLUE, LIGHT_PINK, RED)
-        subtitle = Text("του Αλέξανδρου Ανασίαδη", font_size=24).next_to(title, DOWN)
+        subtitle = Text("του Αλέξανδρου Ανασίαδη & Ιάσονα Γαλάνη", font_size=24).next_to(title, DOWN)
 
         red_dot = Dot(color=RED).shift(LEFT * 5)
         blue_dot = Dot(color=BLUE).shift(DOWN * 2).shift(RIGHT * 1.5)
