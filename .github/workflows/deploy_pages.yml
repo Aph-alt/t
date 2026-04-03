@@ -51,11 +51,11 @@ jobs:
         sudo apt-get install libpango1.0-dev ffmpeg freeglut3-dev xvfb
         nohup Xvfb $DISPLAY &
 
-    - name: Setup TeX Live
+    - name: Install TeX Live
       if: ${{ env.USES_TEX == 'true' }}
-      uses: xu-cheng/latex-action@v3
-      with:
-        root_file: dummy.tex
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-xetex
 
     - name: Set up virtual display
       run: |
