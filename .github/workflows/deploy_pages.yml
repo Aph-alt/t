@@ -53,42 +53,9 @@ jobs:
 
     - name: Setup TeX Live
       if: ${{ env.USES_TEX == 'true' }}
-      uses: teatimeguest/setup-texlive-action@v3
+      uses: xu-cheng/latex-action@v3
       with:
-        packages: >-
-          amsmath
-          babel-english
-          cbfonts-fd
-          cm-super
-          count1to
-          ctex
-          doublestroke
-          dvisvgm
-          everysel
-          fontspec
-          frcursive
-          fundus-calligra
-          gnu-freefont
-          jknapltx
-          latex-bin
-          mathastext
-          microtype
-          multitoc
-          physics
-          polyglossia
-          prelim2e
-          preview
-          ragged2e
-          relsize
-          rsfs
-          setspace
-          standalone
-          tipa
-          wasy
-          wasysym
-          xcolor
-          xetex
-          xkeyval
+        root_file: dummy.tex
 
     - name: Set up virtual display
       run: |
